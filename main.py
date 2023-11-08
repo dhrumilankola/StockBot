@@ -9,9 +9,11 @@ from tokenize import Token
 from tracemalloc import stop
 import numpy as np
 import pandas as pd
+import config
 
-API_KEY = '5021308347:AAFayy20PDMUSdxXxZ9YOx4qkHt7rCUNK1c'
-bot = telebot.TeleBot(API_KEY)
+
+key = config.API_KEY
+bot = telebot.TeleBot(key)
 
 @bot.message_handler(commands=['Greet'])
 def greet(message):
